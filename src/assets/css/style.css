@@ -1,0 +1,308 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* COLOR PALETTE */
+:root {
+    /* Primary Colors */
+    --platinum: #eee;
+    --light-green: #b0ff48;
+    --tea-green: #c7d59fff;
+    --yellow-green: #b7ce63ff;
+    --apple-green: #8fb339ff;
+    --ebony: #4b5842ff;
+    --dark: #242424;
+    --shadow: 0 2rem 2rem 0 rgba(0, 0, 0, .2);
+    --shadow-alt: 0 1rem 1rem 0 rgba(0, 0, 0, .2);
+}
+
+/* OVERRIDE DEFAULT STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    transition: .4s all ease;
+}
+
+body {
+    background: var(--apple-green);    
+}
+
+/* STYLING FOR ROOT CONTAINER */
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* STYLING FOR APP CONTAINER */
+.app {
+    background: var(--platinum);
+    border-radius: 21px;
+    padding: 2rem;
+    width: 500px;
+    border-top: 12px solid var(--tea-green);
+    box-shadow: var(--shadow);
+}
+
+.app-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    width: 15%;
+    cursor: pointer;
+    opacity: .7;
+}
+
+.logo:hover {
+    transform: translateY(-4px);
+    opacity: 1;
+}
+
+.title-text {
+    text-align: right;
+    max-width: 70%;
+}
+
+.app-name {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.7rem;
+    color: var(--dark);
+}
+
+.app-name span {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+    color: var(--apple-green);
+}
+
+.quote {
+    font-size: .7rem;
+    font-weight: 700;
+    color: var(--apple-green);
+}
+
+.quote span {
+    font-size: .9rem;
+    font-weight: 900;
+    color: var(--dark);
+}
+
+/* STYLING FOR INPUT SECTION */
+
+.user-input {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+input {
+    width: 70%;
+    padding: 2.5rem 1rem .1rem 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-bottom: 2px solid var(--tea-green);
+    background: transparent;
+    color: var(--dark);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* STYLING FOR ADD BUTTON */
+.add-btn {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem;
+    height: 20px;
+    font-weight: 900;
+    font-size: 1.2rem;
+    border: none;
+    border-top: 3px solid var(--apple-green);
+    border-right: 3px solid var(--apple-green);
+    border-radius: 0 21px 0 21px;
+    background: var(--apple-green);
+    color: var(--platinum);
+    cursor: pointer;
+}
+
+.add-icon {
+    animation: bobble 1s infinite;
+    font-size: 1.5rem;
+}
+
+.add-btn:hover {
+    border-top: 3px solid var(--yellow-green);
+    border-right: 3px solid var(--yellow-green);
+    transform: translateY(-4px);
+    box-shadow: 0 .5rem .9rem 0 rgba(0, 0, 0, .1);
+}
+
+/******* ANIMATIONS ********/
+/****** BOBBLE ANIMATION *******/
+@keyframes bobble {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* STYLING FOR TODO CONTAINER */
+.todo-container {
+    padding: 2rem;
+}
+
+
+/* STYLING FOR TODO ITEM */
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding: .6rem 1.5rem;
+    background: var(--apple-green);
+    opacity: .7;
+    color: var(--platinum);
+    font-weight: 900;
+    border-radius: 99px;
+    cursor: pointer;
+}
+
+.todo-item:hover {
+    box-shadow: var(--shadow-alt);
+    transform: translateY(-4px);
+    opacity: 1;
+}
+
+.is-active {
+    box-shadow: var(--shadow-alt);
+    opacity: 1;
+}
+
+/* STYLING FOR TODO BUTTON CONTAINER */
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+/* STYLING FOR CHECK AND DELETE ICONS */
+.todo-icon {
+    color: var(--dark);
+    font-size: 1.4rem;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.todo-icon:hover {
+    transform: scale(1.2);
+}
+
+.check, .trash {
+    background: transparent;
+    border: none;
+}
+
+
+
+
+/* MEDIA QUERRIES */
+@media (max-width: 768px) {
+    .app {
+        max-width: 350px;
+    }
+
+    .add-btn {
+        font-size: 1rem;
+        gap: .5rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 376px) {
+    .app {
+        max-width: 350px;
+    }
+
+    .add-btn {
+        font-size: 1rem;
+        gap: .5rem;
+        padding: 1rem;
+    }
+
+    .todo-container {
+        padding: 0;
+    }
+
+    .todo-item {
+        font-size: .9rem;
+    }
+
+    .button-container {
+        gap: 1.2rem;
+    }
+
+    .todo-icon {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .app {
+        max-width: 300px;
+        padding: 1.5rem;
+    }
+
+    .user-input {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .add-btn {
+        width: 40%;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .todo-container {
+        padding: 0;
+    }
+
+    .todo-item {
+        font-size: .9rem;
+    }
+
+    .button-container {
+        gap: 1.2rem;
+    }
+
+    .todo-icon {
+        font-size: 1.2rem;
+    }
+}

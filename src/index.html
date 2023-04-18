@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List | App</title>
+
+    <!--===== STLYE SHEETS & FONTS =====-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.css">
+
+    <!-- ========================= -->
+</head>
+
+<body>
+
+    <main id="root">
+        <!--==== APP CONTAINER ====-->
+        <div class="app">
+            <!--=== APP DETAILS ===-->
+            <div class="app-details">
+                <!--=== LOGO ===-->
+                <img src="./assets/images/logos/Logo Files/For Web/png/Color logo - no background.png" alt="" class="logo">
+
+                <!--=== TITLE TEXT ===-->
+                <div class="title-text">
+                    <h2 class="app-name">
+                        Toe 
+                        <span>
+                            Doe
+                        </span>
+                    </h2>
+    
+                    <p class="quote">
+                        You can only <span>manage time</span> if you track it right
+                    </p>
+                </div>
+            </div>
+
+            <!--==== INPUT SECTION ====-->
+            <section class="user-input">
+                <input type="text" id="input" class="input" placeholder="Add to do task here....">
+
+                <!--== ADD BUTTON ==-->
+                <button class="add-btn">
+                    Add
+                    <i class="fas fa-plus add-icon"></i>
+                </button>
+            </section>
+
+
+            <!--==== TODO CONTAINER ====-->
+            <section class="todo-container">
+                <!--===== TODOS =====-->
+                <ul class="todos">
+                    <!--==== TODO ITEM ====-->
+                    <li class="todo-item">
+                        Do laundry
+
+                        <!-- TODO BUTTON CONTAINER -->
+                        <div class="button-container">
+                            <button class="check" id="check">
+                                <i class="fas fa-check todo-icon"></i>
+                            </button>
+                            
+                            <button id="trash" class="trash">
+                                <i class="fas fa-trash-alt todo-icon"></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <!--==== TODO ITEM ====-->
+                    <li class="todo-item is-active">
+                        Practice Scales
+
+                        <!-- TODO BUTTON CONTAINER -->
+                        <div class="button-container">
+                            <button class="check" id="check">
+                                <i class="fas fa-check todo-icon"></i>
+                            </button>
+                            
+                            <button id="trash" class="trash">
+                                <i class="fas fa-trash-alt todo-icon"></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <!--==== TODO ITEM ====-->
+                    <li class="todo-item">
+                        Finish assignment
+
+                        <!-- TODO BUTTON CONTAINER -->
+                        <div class="button-container">
+                            <button class="check" id="check">
+                                <i class="fas fa-check todo-icon"></i>
+                            </button>
+                            
+                            <button id="trash" class="trash">
+                                <i class="fas fa-trash-alt todo-icon"></i>
+                            </button>
+                        </div>
+                    </li>
+
+                    <!--==== TODO ITEM ====-->
+                    <li class="todo-item">
+                        Finish model
+
+                         <!-- TODO BUTTON CONTAINER -->
+                        <div class="button-container">
+                            <button class="check" id="check">
+                                <i class="fas fa-check todo-icon"></i>
+                            </button>
+                            
+                            <button id="trash" class="trash">
+                                <i class="fas fa-trash-alt todo-icon"></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+
+            </section>
+
+        </div>
+    </main>
+
+
+    <!--========== SCRIPTS ==========-->
+    <script src="./assets/fontawesome/js/all.js"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
