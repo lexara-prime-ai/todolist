@@ -195,10 +195,18 @@ input:focus {
     opacity: 1;
 }
 
+
+/* ACTIVE AND COMPLETED STATES */
 .is-active {
     box-shadow: var(--shadow-alt);
     opacity: 1;
 }
+
+.completed {
+    text-decoration: line-through;
+    opacity: .7;
+}
+
 
 /* STYLING FOR TODO BUTTON CONTAINER */
 .button-container {
@@ -209,11 +217,14 @@ input:focus {
 
 
 /* STYLING FOR CHECK AND DELETE ICONS */
+button {
+    cursor: pointer;
+}
+
 .todo-icon {
     color: var(--dark);
     font-size: 1.4rem;
     pointer-events: none;
-    cursor: pointer;
 }
 
 .todo-icon:hover {
@@ -223,6 +234,7 @@ input:focus {
 .check, .trash {
     background: transparent;
     border: none;
+    cursor: pointer;
 }
 
 
@@ -271,6 +283,8 @@ input:focus {
 
 @media (max-width: 320px) {
     .app {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         max-width: 300px;
         padding: 1.5rem;
     }

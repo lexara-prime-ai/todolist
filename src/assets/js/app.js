@@ -34,6 +34,7 @@ function addTodo(event) {
         const todoItem = document.createElement('li');
         todoItem.classList.toggle('todo-item');
         todoItem.innerText = userInput.value;
+        todoItem.classList.toggle('is-active');
         // APPEND TODO ITEM TO TODO WRAPPER
         todoWrapper.appendChild(todoItem);
 
@@ -64,29 +65,27 @@ function addTodo(event) {
         todoButtonContainer.appendChild(trashBtn);
 
         userInput.value = '';
-        // event.stopPropagation();
+        event.stopPropagation();
     }
 }
 
-
+// FUNCTION TO DELETE TODO
 function deleteCheck(event) {
-    alert("You're about to delete a task!");
     const item = event.target;
 
+    // DELETE TODO
     if (item.classList[0] === 'trash') {
-        log('click!')
+        log('Item deleted!');
+        alert("You're about to delete a task!");
         const todo = item.parentElement.parentElement;
         todo.remove();
     }
+
+    if (item.classList[0] === 'check') {
+        const todo = item.parentElement.parentElement;
+        todo.classList.toggle('completed');
+    }
 }
-
-
-
-
-
-
-
-    // this.parentNode.parentNode.removeChild(this.parentNode)
 
 
 
