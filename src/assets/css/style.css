@@ -178,6 +178,16 @@ input:focus {
     overflow-y: auto;
     max-height: 200px;
 }
+/*******************************/
+
+/* STYLING FOR SCROLLBAR */
+::-webkit-scrollbar{
+    opacity:0;
+    background: transparent;
+}
+::-webkit-scrollbar:hover{
+    opacity: 1;
+}
 
 
 /* STYLING FOR TODO ITEM */
@@ -257,6 +267,14 @@ button {
         gap: .5rem;
         padding: 1rem;
     }
+
+    .todo-container {
+        padding: 0;
+    }
+
+    .todos {
+        padding: 0;
+    }
 }
 
 @media (max-width: 376px) {
@@ -273,6 +291,8 @@ button {
     .todo-container {
         padding: 0;
     }
+
+  
 
     .todo-item {
         font-size: .9rem;
