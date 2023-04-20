@@ -171,6 +171,12 @@ input:focus {
 /* STYLING FOR TODO CONTAINER */
 .todo-container {
     padding: 2rem;
+   
+}
+
+.todos {
+    overflow-y: auto;
+    max-height: 200px;
 }
 
 
